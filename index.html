@@ -1,520 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Farm Manager - Revolutionize your farm management.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Farm Manager - Revolutionize your farm management." />
     <title>Farm Manager - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Include updated CSS here */
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <!--[if lt IE 10]>
+    <script src="path/to/polyfill.js"></script>
+    <![endif]-->
 </head>
 <body>
+<!-- Skip to main content link for accessibility -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <!-- Header -->
 <header class="container">
     <div class="logo">
-        <img src="farm-icon.png" alt="Farm Manager Logo">
+        <img src="farm-icon.png" alt="Farm Manager Logo" />
         <span>Farm Manager</span>
     </div>
-    <nav>
-        <!-- Navigation links -->
+    <nav role="navigation" aria-label="Main Navigation">
         <ul class="nav-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="Features.html">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
-        <!-- Sign In Button -->
         <button class="sign-in-btn">Sign In</button>
-        <!-- Hamburger Menu for Mobile -->
         <button class="hamburger-menu" aria-label="Toggle navigation">&#9776;</button>
     </nav>
 </header>
-<!-- Hero Section -->
-<section class="hero">
-    <h1>Revolutionize Your Farm Management</h1>
-    <p>Empowering farmers to track, analyze, and grow—all in one place.</p>
-    <div class="hero-buttons">
-        <a class="primary-btn" href="login.html">Start for Free</a>
-        <button class="secondary-btn">Learn More</button>
-    </div>
-    <div class="scroll-arrow">&#8595;</div>
-</section>
 
-<!-- Scripts (Optional) -->
-<script>
-    // Script for the hamburger menu toggle
-    const hamburger = document.querySelector('.hamburger-menu');
-    const navList = document.querySelector('.nav-list');
-    hamburger.addEventListener('click', () => {
-        navList.classList.toggle('active');
-    });
-</script>
-</body>
-</html>
-<style>
-    /* General Styles */
-    body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        background-color: #000;
-        color: white;
-        line-height: 1.6;
-    }
-
-    a {
-        text-decoration: none;
-        color: white;
-        transition: color 0.3s;
-    }
-
-    a:hover {
-        color: gray;
-    }
-
-    /* Header */
-    header {
-        position: sticky;
-        top: 0;
-        background-color: #111;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    header .logo {
-        font-size: 1.8rem;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-    }
-
-    header .logo img {
-        height: 40px;
-        margin-right: 10px;
-    }
-
-    /* Navigation */
-    nav ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 0 15px;
-    }
-
-    nav .sign-in-btn {
-        padding: 0.5rem 1rem;
-        border: 1px solid white;
-        background: none;
-        color: white;
-        cursor: pointer;
-        transition: background 0.3s, color 0.3s;
-    }
-
-    nav .sign-in-btn:hover {
-        background: white;
-        color: black;
-    }
-
-    /* Hamburger Menu for Mobile */
-    .hamburger-menu {
-        display: none;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
-    /* Hero Section */
-    .hero {
-        position: relative;
-        text-align: center;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: url('animated-farm-bg.gif') no-repeat center center/cover;
-        animation: fadeIn 2s ease-in-out;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-        animation: slideIn 1s ease-out;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        animation: fadeIn 1.5s ease-in-out;
-    }
-
-    .hero .hero-buttons {
-        display: flex;
-        gap: 1rem;
-    }
-
-    .hero button, .hero .primary-btn {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        border: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .hero .primary-btn {
-        background-color: white;
-        color: black;
-    }
-
-    .hero .primary-btn:hover {
-        background-color: gray;
-        color: white;
-    }
-
-    .hero .secondary-btn {
-        background: none;
-        color: white;
-        border: 1px solid white;
-    }
-
-    .hero .secondary-btn:hover {
-        background-color: white;
-        color: black;
-    }
-
-    .scroll-arrow {
-        position: absolute;
-        bottom: 20px;
-        font-size: 1.5rem;
-        animation: bounce 2s infinite;
-    }
-
-    /* Keyframe Animations */
-    @keyframes bounce {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-
-    @keyframes slideIn {
-        0% { transform: translateY(-50px); opacity: 0; }
-        100% { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    }
-
-    /* Mobile and Tablet Responsive Design */
-    @media (max-width: 768px) {
-        nav ul {
-            display: none;
-            flex-direction: column;
-            gap: 1rem;
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            background-color: #111;
-            padding: 1rem;
-            border-radius: 10px;
-        }
-
-        nav ul.active {
-            display: flex;
-        }
-
-        nav ul li {
-            margin: 0;
-        }
-
-        .hamburger-menu {
-            display: block;
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-        }
-
-        .hero p {
-            font-size: 1rem;
-        }
-
-        .hero .hero-buttons {
-            flex-direction: column;
-            gap: 1rem;
-        }
-    }
-</style>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Core Features - Farm Manager</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-</head>
-<body class="bg-black text-white">
-<section class="py-16 px-6 lg:px-20 text-center">
-    <h2 class="text-4xl font-bold mb-6 animate__animated animate__fadeIn">Core Features</h2>
-    <p class="text-gray-300 text-lg mb-10 animate__animated animate__fadeIn animate__delay-1s">
-        Powerful tools to help you manage your farm efficiently.
-    </p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Feature 1 -->
-        <div class="p-6 border border-gray-700 rounded-lg hover:shadow-xl transition transform hover:scale-105 animate__animated animate__fadeInUp">
-            <div class="text-5xl mb-4">🌱</div>
-            <h3 class="text-2xl font-semibold mb-2">Crop Management</h3>
-            <p class="text-gray-400">Track, plan, and optimize your crop cycles effortlessly.</p>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="p-6 border border-gray-700 rounded-lg hover:shadow-xl transition transform hover:scale-105 animate__animated animate__fadeInUp animate__delay-1s">
-            <div class="text-5xl mb-4">🐄</div>
-            <h3 class="text-2xl font-semibold mb-2">Livestock Monitoring</h3>
-            <p class="text-gray-400">Monitor animal health, feeding, and productivity in real time.</p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="p-6 border border-gray-700 rounded-lg hover:shadow-xl transition transform hover:scale-105 animate__animated animate__fadeInUp animate__delay-2s">
-            <div class="text-5xl mb-4">📊</div>
-            <h3 class="text-2xl font-semibold mb-2">Financial Insights</h3>
-            <p class="text-gray-400">Get detailed reports and analytics to boost farm profits.</p>
-        </div>
-    </div>
-</section>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farm Manager Footer</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Themed Testimonials</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<section class="testimonial-section">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial-container">
-        <div class="testimonial-card fade">
-            <p>"Farm Manager completely changed the way I manage my farm. The analytics and insights are top-notch!"</p>
-            <div class="profile">
-                <img src="user1.jpg" alt="User 1">
-                <h4>John Doe</h4>
-                <span>Professional Farmer</span>
+<!-- Main Content -->
+<main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Revolutionize Your Farm Management</h1>
+            <p>Empowering farmers to track, analyze, and grow—all in one place.</p>
+            <div class="hero-buttons">
+                <a class="primary-btn" href="login.html">Start for Free</a>
+                <a class="secondary-btn" href="#learn-more">Learn More</a>
             </div>
         </div>
-
-        <div class="testimonial-card fade">
-            <p>"A fantastic tool for modern farmers. It helps streamline everything from finances to livestock management!"</p>
-            <div class="profile">
-                <img src="user2.jpg" alt="User 2">
-                <h4>Sarah Johnson</h4>
-                <span>Agriculture Expert</span>
-            </div>
-        </div>
-
-        <div class="testimonial-card fade">
-            <p>"Managing my farm has never been easier! The support team is also very responsive and helpful."</p>
-            <div class="profile">
-                <img src="user3.jpg" alt="User 3">
-                <h4>Michael Smith</h4>
-                <span>Organic Farmer</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="dots">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-</section>
+        <div class="scroll-arrow">&#8595;</div>
+    </section>
+    <!-- Additional sections (e.g., About, Feature Preview) can be added here -->
+</main>
 
 <script src="script.js"></script>
-
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Core Features of Farm Manager" />
+    <title>Core Features - Farm Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-black text-white">
+<!-- Skip to main content link -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+
+
+<!-- Main Content -->
+<main id="main-content">
+    <!-- Core Features Section -->
+    <section class="py-16 px-6 lg:px-20 text-center">
+        <h2 class="text-4xl font-bold mb-6 animate__animated animate__fadeIn">Core Features</h2>
+        <p class="text-gray-300 text-lg mb-10 animate__animated animate__fadeIn animate__delay-1s">
+            Powerful tools to help you manage your farm efficiently.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="p-6 border border-gray-700 rounded-lg hover:shadow-xl transition transform hover:scale-105 animate__animated animate__fadeInUp">
+                <div class="text-5xl mb-4">🌱</div>
+                <h3 class="text-2xl font-semibold mb-2">Crop Management</h3>
+                <p class="text-gray-400">Track, plan, and optimize your crop cycles effortlessly.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="p-6 border border-gray-700 rounded-lg hover:shadow-xl transition transform hover:scale-105 animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="text-5xl mb-4">🐄</div>
+                <h3 class="text-2xl font-semibold mb-2">Livestock Monitoring</h3>
+                <p class="text-gray-400">Monitor animal health, feeding, and productivity in real time.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="p-6 border border-gray-700 rounded-lg hover:shadow-xl transition transform hover:scale-105 animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="text-5xl mb-4">📊</div>
+                <h3 class="text-2xl font-semibold mb-2">Financial Insights</h3>
+                <p class="text-gray-400">Get detailed reports and analytics to boost farm profits.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
 <style>
-    /* Global Styles */
-    body {
-        background-color: #000;
-        color: #fff;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
+    /* General Styles */
+   * {
+     box-sizing: border-box;
+   }
+   body {
+     margin: 0;
+     font-family: 'Poppins', sans-serif;
+     background-color: #000;
+     color: #fff;
+     line-height: 1.6;
+   }
+   .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 2rem;
+   }
 
-    /* Testimonials Section */
-    .testimonial-section {
-        padding: 50px 20px;
-    }
+   /* Skip Link (Accessibility) */
+   .skip-link {
+     position: absolute;
+     top: -40px;
+     left: 0;
+     background: #000;
+     color: #fff;
+     padding: 8px 16px;
+     z-index: 100;
+     transition: top 0.3s;
+   }
+   .skip-link:focus {
+     top: 0;
+   }
 
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-    }
+   /* Links */
+   a {
+     text-decoration: none;
+     color: inherit;
+     transition: color 0.3s;
+   }
+   a:hover {
+     color: #ccc;
+   }
 
-    /* Testimonial Container */
-    .testimonial-container {
-        position: relative;
-        max-width: 600px;
-        margin: auto;
-    }
+   /* Header */
+   header {
+     position: sticky;
+     top: 0;
+     background-color: #111;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1rem 0;
+     z-index: 1000;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+   }
+   header .logo {
+     display: flex;
+     align-items: center;
+     font-size: 1.8rem;
+     font-weight: bold;
+   }
+   header .logo img {
+     height: 40px;
+     margin-right: 10px;
+   }
 
-    .testimonial-card {
-        display: none;
-        background: #111;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    }
+   /* Navigation */
+   nav {
+     display: flex;
+     align-items: center;
+   }
+   .nav-list {
+     display: flex;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+   }
+   .nav-list li {
+     margin: 0 15px;
+   }
+   .nav-list li a {
+     color: #fff;
+     font-weight: 500;
+   }
+   .nav-list li a.active,
+   .nav-list li a:hover {
+     color: #ddd;
+   }
+   .sign-in-btn {
+     padding: 0.5rem 1rem;
+     border: 1px solid #fff;
+     background: none;
+     color: #fff;
+     cursor: pointer;
+     margin-left: 1rem;
+     transition: background 0.3s, color 0.3s;
+   }
+   .sign-in-btn:hover {
+     background: #fff;
+     color: #000;
+   }
+   .hamburger-menu {
+     display: none;
+     background: none;
+     border: none;
+     color: #fff;
+     font-size: 1.5rem;
+     margin-left: 1rem;
+     cursor: pointer;
+   }
 
-    .testimonial-card p {
-        font-size: 1.2rem;
-        font-style: italic;
-    }
+   /* Hero Section */
+   .hero {
+     position: relative;
+     text-align: center;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: url('animated-farm-bg.gif') no-repeat center center/cover;
+     color: #fff;
+     padding: 0 2rem;
+   }
+   .hero::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: rgba(0, 0, 0, 0.5);
+   }
+   .hero-content {
+     position: relative;
+     z-index: 1;
+   }
+   .hero h1 {
+     font-size: 3rem;
+     font-weight: bold;
+     margin-bottom: 1rem;
+     animation: slideIn 1s ease-out;
+   }
+   .hero p {
+     font-size: 1.2rem;
+     margin-bottom: 2rem;
+     animation: fadeIn 1.5s ease-in-out;
+   }
+   .hero-buttons {
+     display: flex;
+     gap: 1rem;
+     justify-content: center;
+   }
+   .primary-btn, .secondary-btn {
+     padding: 1rem 2rem;
+     font-size: 1rem;
+     border: none;
+     cursor: pointer;
+     transition: all 0.3s ease;
+   }
+   .primary-btn {
+     background-color: #fff;
+     color: #000;
+   }
+   .primary-btn:hover {
+     background-color: #ccc;
+   }
+   .secondary-btn {
+     background: none;
+     color: #fff;
+     border: 1px solid #fff;
+   }
+   .secondary-btn:hover {
+     background-color: #fff;
+     color: #000;
+   }
+   .scroll-arrow {
+     position: absolute;
+     bottom: 20px;
+     font-size: 2rem;
+     animation: bounce 2s infinite;
+     z-index: 1;
+   }
 
-    /* Profile Section */
-    .profile {
-        margin-top: 15px;
-    }
+   /* Keyframe Animations with Vendor Prefixes */
+   @-webkit-keyframes bounce {
+     0%, 100% { -webkit-transform: translateY(0); transform: translateY(0); }
+     50% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
+   }
+   @keyframes bounce {
+     0%, 100% { transform: translateY(0); }
+     50% { transform: translateY(-10px); }
+   }
 
-    .profile img {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        border: 2px solid #fff;
-    }
+   @-webkit-keyframes slideIn {
+     0% { -webkit-transform: translateY(-50px); transform: translateY(-50px); opacity: 0; }
+     100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+   }
+   @keyframes slideIn {
+     0% { transform: translateY(-50px); opacity: 0; }
+     100% { transform: translateY(0); opacity: 1; }
+   }
 
-    .profile h4 {
-        margin: 10px 0 5px;
-        font-size: 1.2rem;
-    }
+   @-webkit-keyframes fadeIn {
+     0% { opacity: 0; }
+     100% { opacity: 1; }
+   }
+   @keyframes fadeIn {
+     0% { opacity: 0; }
+     100% { opacity: 1; }
+   }
 
-    .profile span {
-        font-size: 0.9rem;
-        color: #bbb;
-    }
+   /* Reduce motion if user prefers */
+   @media (prefers-reduced-motion: reduce) {
+     * {
+       animation-duration: 0.001ms !important;
+       animation-iteration-count: 1 !important;
+       transition-duration: 0.001ms !important;
+     }
+   }
 
-    /* Dots Navigation */
-    .dots {
-        margin-top: 15px;
-    }
+   /* Responsive Navigation for Mobile */
+   @media (max-width: 768px) {
+     .nav-list {
+       position: absolute;
+       top: 60px;
+       right: 20px;
+       background-color: #111;
+       flex-direction: column;
+       gap: 1rem;
+       padding: 1rem;
+       border-radius: 10px;
+       display: none;
+     }
+     .nav-list.active {
+       display: flex;
+     }
+     .hamburger-menu {
+       display: block;
+     }
+     header {
+       padding: 1rem;
+     }
+     .hero h1 {
+       font-size: 2rem;
+     }
+     .hero p {
+       font-size: 1rem;
+     }
+     .hero-buttons {
+       flex-direction: column;
+     }
+   }
 
-    .dot {
-        height: 12px;
-        width: 12px;
-        margin: 0 5px;
-        background-color: #444;
-        border-radius: 50%;
-        display: inline-block;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
+   /* Testimonials Section */
+   .testimonial-section {
+     padding: 4rem 2rem;
+     text-align: center;
+     background: #222;
+   }
+   .testimonial-section h2 {
+     font-size: 2.5rem;
+     margin-bottom: 2rem;
+   }
+   .testimonial-container {
+     position: relative;
+     max-width: 800px;
+     margin: 0 auto;
+   }
+   .testimonial-card {
+     display: none;
+     padding: 2rem;
+     background: #333;
+     border-radius: 10px;
+     margin-bottom: 2rem;
+   }
+   .testimonial-card p {
+     font-size: 1.2rem;
+     margin-bottom: 1rem;
+   }
+   .testimonial-card .profile {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 1rem;
+   }
+   .testimonial-card .profile img {
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     object-fit: cover;
+   }
+   .testimonial-card .profile h4 {
+     margin: 0;
+     font-size: 1.2rem;
+   }
+   .testimonial-card .profile span {
+     font-size: 0.9rem;
+     color: #bbb;
+   }
 
-    .dot.active, .dot:hover {
-        background-color: #fff;
-    }
+   /* Slider Dots */
+   .dots {
+     text-align: center;
+   }
+   .dot {
+     height: 15px;
+     width: 15px;
+     margin: 0 5px;
+     background-color: #bbb;
+     border-radius: 50%;
+     display: inline-block;
+     cursor: pointer;
+     transition: background-color 0.3s;
+   }
+   .dot.active,
+   .dot:hover {
+     background-color: #717171;
+   }
 
-    /* Fade Animation */
-    .fade {
-        animation: fadeEffect 1s;
-    }
-
-    @keyframes fadeEffect {
-        from { opacity: 0.4; }
-        to { opacity: 1; }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .testimonial-card {
-            padding: 15px;
-        }
-
-        .profile img {
-            width: 50px;
-            height: 50px;
-        }
-
-        .profile h4 {
-            font-size: 1rem;
-        }
-
-        .profile span {
-            font-size: 0.8rem;
-        }
-    }
-
+   /* Footer */
+   footer {
+     background: #111;
+     color: #fff;
+     padding: 2rem;
+     font-size: 0.9rem;
+   }
+   .footer-container {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 2rem;
+     justify-content: space-between;
+     margin-bottom: 1rem;
+   }
+   .footer-section {
+     flex: 1 1 200px;
+   }
+   .footer-section h2 {
+     font-size: 1.2rem;
+     margin-bottom: 1rem;
+   }
+   .footer-section ul {
+     list-style: none;
+     padding: 0;
+   }
+   .footer-section ul li {
+     margin-bottom: 0.5rem;
+   }
+   .footer-section ul li a:hover {
+     text-decoration: underline;
+   }
+   .footer-bottom {
+     text-align: center;
+     border-top: 1px solid #333;
+     padding-top: 1rem;
+   }
 </style>
 <script>
-    let slideIndex = 0;
-    showSlides();
+    // script.js
 
-    function showSlides() {
-        let slides = document.getElementsByClassName("testimonial-card");
-        let dots = document.getElementsByClassName("dot");
+    document.addEventListener('DOMContentLoaded', () => {
+      // Hamburger Menu Toggle
+      const hamburger = document.querySelector('.hamburger-menu');
+      const navList = document.querySelector('.nav-list');
 
+      if (hamburger && navList) {
+        hamburger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navList.classList.toggle('active');
+        });
+
+        // Close nav when a link is clicked
+        document.querySelectorAll('.nav-list li a').forEach(link => {
+          link.addEventListener('click', () => {
+            navList.classList.remove('active');
+          });
+        });
+
+        // Close nav when clicking outside
+        document.addEventListener('click', (event) => {
+          if (!navList.contains(event.target) && !hamburger.contains(event.target)) {
+            navList.classList.remove('active');
+          }
+        });
+      }
+
+      // Testimonial Slider
+      let slideIndex = 0;
+      let slideTimer;
+      const slides = document.getElementsByClassName("testimonial-card");
+      const dots = document.getElementsByClassName("dot");
+
+      function showSlides() {
+        // Hide all slides
         for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+          slides[i].style.display = "none";
         }
-
+        // Increment and reset index if needed
         slideIndex++;
-        if (slideIndex > slides.length) { slideIndex = 1 }
-        slides[slideIndex - 1].style.display = "block";
-
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
         }
+        // Remove active class from dots
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].classList.remove("active");
+        }
+        // Display the current slide and activate corresponding dot
+        if (slides[slideIndex - 1]) {
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].classList.add("active");
+        }
+      }
 
-        dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 3000); // Change slide every 3 seconds
-    }
-
-    function currentSlide(n) {
-        slideIndex = n - 1;
+      function startSlideShow() {
+        // Show a slide immediately, then set interval
         showSlides();
-    }
-</script>
+        slideTimer = setInterval(showSlides, 3000);
+      }
 
+      function resetSlideShow() {
+        clearInterval(slideTimer);
+        startSlideShow();
+      }
+
+      if (slides.length > 0) {
+        startSlideShow();
+      }
+
+      // Allow manual control of the slider via dot clicks
+      window.currentSlide = function(n) {
+        slideIndex = n - 1;
+        resetSlideShow();
+        showSlides();
+      };
+
+      // Cleanup timer on page unload
+      window.addEventListener('beforeunload', () => {
+        clearInterval(slideTimer);
+      });
+    });
+</script>
 <footer>
     <div class="footer-container">
         <div class="footer-section about">
             <h2>About Us</h2>
-            <p>Farm Manager helps farmers efficiently manage crops, livestock, and finances with modern technology.</p>
+            <p>
+                Farm Manager helps farmers efficiently manage crops, livestock, and finances with modern technology.
+            </p>
         </div>
         <div class="footer-section links">
             <h2>Quick Links</h2>
@@ -527,17 +571,29 @@
         </div>
         <div class="footer-section contact">
             <h2>Contact Us</h2>
-            <p>📍 Katenga ,Chatmohar,Pabna</p>
+            <p>📍 Katenga, Chatmohar, Pabna</p>
             <p>📞 +880 1704873022</p>
-            <p>✉️ support@farmmanager.com</p>
+            <p>✉️ <a href="mailto:support@farmmanager.com">support@farmmanager.com</a></p>
         </div>
         <div class="footer-section social">
             <h2>Follow Us</h2>
             <div class="social-icons">
-                <a href="https://www.facebook.com/asifulislamasiff"><i class="fab fa-facebook"><i>Facebook</i></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/asifulislamasiff" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
             </div>
         </div>
     </div>
@@ -545,108 +601,105 @@
         <p>&copy; 2025 Farm Manager. All Rights Reserved.</p>
     </div>
 </footer>
-
-</body>
-</html>
-
-
 <style>
-
-    /* Dark Theme Footer */
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #000;
-        color: #fff;
-    }
-
+    /* Dark Theme Footer Styles */
     footer {
-        background-color: #111;
-        padding: 40px 0;
-        text-align: center;
+      background-color: #111;
+      padding: 40px 0;
+      text-align: center;
     }
 
     .footer-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        max-width: 1100px;
-        margin: auto;
-        padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
     .footer-section {
-        flex: 1;
-        min-width: 250px;
-        margin: 10px;
+      flex: 1;
+      min-width: 250px;
+      margin: 10px;
+      text-align: left;
     }
 
-    h2 {
-        font-size: 18px;
-        margin-bottom: 15px;
-        color: white;
-        text-transform: uppercase;
+    .footer-section h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #fff;
+      text-transform: uppercase;
     }
 
-    p, ul {
-        font-size: 14px;
-        color: #ccc;
+    .footer-section p,
+    .footer-section ul {
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.5;
     }
 
-    ul {
-        list-style: none;
-        padding: 0;
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
     }
 
-    ul li {
-        margin-bottom: 10px;
+    .footer-section ul li {
+      margin-bottom: 10px;
     }
 
-    ul li a {
-        text-decoration: none;
-        color: #aaa;
-        transition: color 0.3s ease-in-out;
+    .footer-section ul li a {
+      text-decoration: none;
+      color: #aaa;
+      transition: color 0.3s ease-in-out;
     }
 
-    ul li a:hover {
-        color: white;
+    .footer-section ul li a:hover {
+      color: #fff;
     }
 
     /* Social Media Icons */
     .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
     }
 
     .social-icons a {
-        font-size: 18px;
-        color: #aaa;
-        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 18px;
+      color: #aaa;
+      transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     }
 
     .social-icons a:hover {
-        color: white;
-        transform: scale(1.2);
+      color: #fff;
+      transform: scale(1.1);
     }
 
     /* Footer Bottom */
     .footer-bottom {
-        margin-top: 20px;
-        padding: 10px;
-        border-top: 1px solid #222;
-        color: #aaa;
-        font-size: 12px;
+      margin-top: 20px;
+      padding: 10px;
+      border-top: 1px solid #222;
+      color: #aaa;
+      font-size: 12px;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
-        .footer-container {
-            flex-direction: column;
-            align-items: center;
-        }
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .footer-section {
+        text-align: center;
+      }
+      .social-icons {
+        justify-content: center;
+      }
     }
-
 </style>
-

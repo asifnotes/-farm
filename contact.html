@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Farm Manager</title>
+    <!-- Google Fonts: Montserrat -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+            rel="stylesheet"
+    />
+    <style>
+        /* --------------------------------------------------
+           Reset & Global Styles
+        ----------------------------------------------------- */
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: 'Montserrat', sans-serif;
+          background-color: #000;
+          color: #fff;
+          line-height: 1.6;
+        }
+
+        a {
+          color: #0f0;
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+
+        /* --------------------------------------------------
+           Container
+        ----------------------------------------------------- */
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 1rem;
+        }
+
+        /* --------------------------------------------------
+           Header
+        ----------------------------------------------------- */
+        header {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        header h1 {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+
+        /* --------------------------------------------------
+           Main Grid Layout
+        ----------------------------------------------------- */
+        .main-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        /* --------------------------------------------------
+           Form Styles
+        ----------------------------------------------------- */
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+
+        .form-group label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+        }
+
+        .form-input,
+        .form-textarea {
+          width: 100%;
+          padding: 0.75rem;
+          background-color: #111;
+          border: 2px solid #333;
+          color: #fff;
+          border-radius: 4px;
+          transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+          outline: none;
+          border-color: #0f0;
+          box-shadow: 0 0 8px #0f0;
+        }
+
+        .submit-btn {
+          padding: 0.75rem;
+          background-color: #222;
+          border: none;
+          border-radius: 4px;
+          font-weight: 700;
+          color: #fff;
+          cursor: pointer;
+          transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .submit-btn:hover {
+          background-color: #0f0;
+          color: #000;
+          box-shadow: 0 0 12px #0f0;
+        }
+
+        /* --------------------------------------------------
+           Contact Details & Map
+        ----------------------------------------------------- */
+        .contact-details h2 {
+          font-size: 1.75rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        .contact-details p {
+          margin-bottom: 1rem;
+        }
+
+        .map-container {
+          width: 100%;
+          height: 16rem;
+          border-radius: 4px;
+          overflow: hidden;
+        }
+
+        /* --------------------------------------------------
+           Social Icons
+        ----------------------------------------------------- */
+        .social-icons {
+          display: flex;
+          gap: 1rem;
+        }
+
+        .social-icon svg {
+          width: 2rem;
+          height: 2rem;
+          fill: currentColor;
+          transition: filter 0.3s ease;
+        }
+
+        .social-icon:hover {
+          filter: brightness(1.2);
+        }
+
+        /* --------------------------------------------------
+           Responsive Styles
+        ----------------------------------------------------- */
+        /* Mobile (up to 600px) */
+        @media (max-width: 600px) {
+          .container {
+            padding: 1rem;
+          }
+          header h1 {
+            font-size: 2rem;
+          }
+          .main-grid {
+            grid-template-columns: 1fr;
+          }
+          .map-container {
+            height: 12rem;
+          }
+        }
+
+        /* Tablets (601px to 1024px) */
+        @media (min-width: 601px) and (max-width: 1024px) {
+          .container {
+            padding: 2rem;
+          }
+          header h1 {
+            font-size: 2.5rem;
+          }
+          .main-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+          .map-container {
+            height: 14rem;
+          }
+        }
+
+        /* Laptops/Desktops (1025px and up) */
+        @media (min-width: 1025px) {
+          .container {
+            padding: 4rem;
+          }
+          header h1 {
+            font-size: 3rem;
+          }
+          .main-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+          .contact-details h2 {
+            font-size: 2rem;
+          }
+          .map-container {
+            height: 16rem;
+          }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Page Header -->
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <!-- Main Grid: Contact Form & Details -->
+    <section class="main-grid">
+        <!-- Contact Form -->
+        <div>
+            <form action="#" method="POST">
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="form-input"
+                            placeholder="Your Name"
+                            required
+                    />
+                </div>
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-input"
+                            placeholder="you@example.com"
+                            required
+                    />
+                </div>
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            class="form-input"
+                            placeholder="+880 17XXXXXXXX"
+                    />
+                </div>
+                <!-- Subject -->
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            class="form-input"
+                            placeholder="Subject"
+                            required
+                    />
+                </div>
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            class="form-textarea"
+                            placeholder="Your Message..."
+                            required
+                    ></textarea>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Contact Details, Map & Social Links -->
+        <div class="contact-details">
+            <!-- Farm Contact Details -->
+            <div>
+                <h2>Our Farm</h2>
+                <p>
+                    Chatmohar,<br />
+                    Pabna,Bangladesh
+                </p>
+                <p>
+                    Phone: <a href="tel:+8801704873022">+880 1704873022</a>
+                </p>
+                <p>
+                    Email:
+                    <a href="mailto:contact@farmmanager.com">contact@farmmanager.com</a>
+                </p>
+            </div>
+
+            <!-- Google Map Embed -->
+            <div class="map-container">
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!2m12!3m3!1s0x0:0x0!2zMzTCsDAwJzAwLjAiTiA3McKwMDAnMDAuMCJF"
+                        width="100%"
+                        height="100%"
+                        style="border: 0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        title="Farm Location"
+                ></iframe>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-icons">
+                <!-- Facebook Icon -->
+                <a href="#" class="social-icon" aria-label="Facebook">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                    >
+                        <path
+                                d="M22.675 0h-21.35C.595 0 0 .593 0 1.326v21.348C0 23.407.595 24 1.325 24h11.495V14.708h-3.13v-3.62h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.314h3.587l-.467 3.62h-3.12V24h6.116C23.405 24 24 23.407 24 22.674V1.326C24 .593 23.405 0 22.675 0z"
+                        />
+                    </svg>
+                </a>
+                <!-- Twitter Icon -->
+                <a href="#" class="social-icon" aria-label="Twitter">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                    >
+                        <path
+                                d="M24 4.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337 3.1a9.865 9.865 0 01-3.127 1.195 4.916 4.916 0 00-8.384 4.482A13.953 13.953 0 011.671 3.149a4.916 4.916 0 001.523 6.556 4.902 4.902 0 01-2.229-.616c-.054 2.28 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.918 4.918 0 004.59 3.417A9.867 9.867 0 010 19.54a13.94 13.94 0 007.548 2.212c9.057 0 14.01-7.513 14.01-14.01 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z"
+                        />
+                    </svg>
+                </a>
+                <!-- Instagram Icon -->
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                    >
+                        <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.057 2.003.25 2.47.415.623.222 1.07.49 1.538.958.467.468.736.915.958 1.538.165.466.358 1.264.415 2.47.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.057 1.206-.25 2.003-.415 2.47-.222.623-.49 1.07-.958 1.538-.468.467-.915.736-1.538.958-.466.165-1.264.358-2.47.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.206-.057-2.003-.25-2.47-.415a3.626 3.626 0 01-1.538-.958 3.626 3.626 0 01-.958-1.538c-.165-.466-.358-1.264-.415-2.47C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.057-1.206.25-2.003.415-2.47a3.626 3.626 0 01.958-1.538 3.626 3.626 0 011.538-.958c.466-.165 1.264-.358 2.47-.415C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.736 0 8.332.013 7.052.072 5.773.13 4.868.325 4.042.62a5.92 5.92 0 00-2.15 1.428A5.92 5.92 0 00.62 4.042c-.295.826-.49 1.731-.548 3.01C.013 8.332 0 8.736 0 12s.013 3.668.072 4.948c.058 1.279.253 2.184.548 3.01a5.92 5.92 0 001.428 2.15 5.92 5.92 0 002.15 1.428c.826.295 1.731.49 3.01.548C8.332 23.987 8.736 24 12 24s3.668-.013 4.948-.072c1.279-.058 2.184-.253 3.01-.548a5.92 5.92 0 002.15-1.428 5.92 5.92 0 001.428-2.15c.295-.826.49-1.731.548-3.01.059-1.28.072-1.684.072-4.948s-.013-3.668-.072-4.948c-.058-1.279-.253-2.184-.548-3.01a5.92 5.92 0 00-1.428-2.15A5.92 5.92 0 0019.96.62c-.826-.295-1.731-.49-3.01-.548C15.668.013 15.264 0 12 0z"
+                        />
+                        <path
+                                d="M12 5.838a6.162 6.162 0 106.162 6.162A6.169 6.169 0 0012 5.838zm0 10.162a4 4 0 114-4 4.005 4.005 0 01-4 4z"
+                        />
+                        <circle cx="18.406" cy="5.594" r="1.44" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
